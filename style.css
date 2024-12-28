@@ -1,0 +1,357 @@
+:root {
+  --mainGreen: limegreen;
+  --mainRed: firebrick;
+  --secondGreen: darkgreen;
+  --secondRed: darkred;
+  --buttonRadius: 10px;
+  --bannerSize: 8vh;
+  --shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+  --gradientColors: black 10%, var(--secondGreen) 40%, var(--mainGreen) 70%, transparent;
+}
+
+@font-face {
+  font-family: "OpenDyslexic3";
+  src: url("/StegaNotes/fonts/OpenDyslexic3-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+@media only screen and (orientation: portrait) {
+
+  .button-group {
+    margin: 5% 0;
+  }
+
+  .footer {
+    height: calc(var(--bannerSize) * 1.5);
+  }
+
+  .footer-content>a {
+    display: block;
+    margin-top: calc(var(--bannerSize) / 2 );
+    text-shadow: var(--shadow);
+  }
+
+  .modalButton {
+    max-width: 45%;
+    margin: 2% 0;
+  }
+
+  header,
+  footer,
+  .modal {
+    padding: 2vh 5vw;
+  }
+
+  header,
+  footer,
+  form,
+  .modal,
+  .note {
+    width: 80%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+
+  .button-group {
+    margin: 5%;
+  }
+
+  .footer {
+    height: var(--bannerSize);
+  }
+
+  .note {
+    min-width: 200px;
+    width: 25%;
+  }
+
+  header,
+  footer,
+  .modal {
+    padding: 2vh 1vw;
+  }
+
+  form,
+  .header-content,
+  .footer-content,
+  .modal {
+    width: 35vw;
+  }
+}
+
+* {
+  border: none;
+  border-radius: var(--buttonRadius);
+  margin: 0;
+  font-family: "OpenDyslexic3", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  user-select: none;
+}
+
+body {
+  background-color: var(--mainGreen);
+}
+
+button {
+  width: 40%;
+  background-color: var(--mainRed);
+  cursor: pointer;
+  font-size: 1.25em;
+}
+
+button:hover {
+  background-color: var(--secondRed);
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+canvas {
+  display: none;
+}
+
+footer {
+  background-image: linear-gradient(to top, var(--gradientColors));
+  bottom: 0;
+  text-align: center;
+}
+
+header {
+  background-image: linear-gradient(to bottom, var(--gradientColors));
+  font-size: 1.5rem;
+  height: calc(var(--bannerSize) * 1.20);
+  top: 0;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+textarea {
+  height: 75%;
+  resize: none;
+  overflow: auto;
+}
+
+a,
+span {
+  color: black;
+  line-height: var(--bannerSize);
+  vertical-align: middle;
+}
+
+button,
+input {
+  border-radius: var(--buttonRadius);
+  padding: 1%;
+}
+
+input,
+textarea {
+  width: 90%;
+  box-sizing: border-box;
+}
+
+footer,
+header {
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+button,
+input,
+textarea {
+  box-shadow: var(--shadow);
+}
+
+form,
+.modal {
+  margin: calc(var(--bannerSize) * 1.5) auto;
+}
+
+input,
+label,
+textarea {
+  font-size: 1.25em;
+}
+
+input,
+label,
+textarea,
+.status {
+  margin: 0 5%;
+}
+
+
+footer,
+header,
+.addButton,
+.decoderButton {
+  position: fixed;
+}
+
+.addButton {
+  right: 2rem;
+}
+
+.button-group {
+  text-align: center;
+}
+
+.checkbox {
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0;
+  transform: scale(2);
+}
+
+.decoderButton {
+  left: 2rem;
+}
+
+.fileInput {
+  display: none;
+}
+
+.icon {
+  height: var(--bannerSize);
+}
+
+.modal {
+  display: none;
+  height: 50%;
+  background-color: var(--secondRed);
+}
+
+.modalButton {
+  min-width: 10%;
+  background-color: var(--mainGreen);
+}
+
+.modalButton:hover {
+  background-color: var(--secondGreen);
+}
+
+.modalButton.close {
+  max-width: 2rem;
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  right: 0;
+  top: 0;
+}
+
+.name {
+  width: 60%;
+  float: middle;
+}
+
+.note {
+  margin: 2%;
+}
+
+.notes {
+  display: none;
+  width: 95%;
+  margin: calc(var(--bannerSize) * 1.5) auto;
+}
+
+.page {
+  margin: 0 auto;
+}
+
+
+.smallFont{
+  font-size: 0.5em;
+}
+
+.status {
+  position: absolute;
+  padding: 0;
+  right: 0;
+  display: none;
+}
+
+.userTitle {
+  width: 85%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.zoomIn {
+  animation: animatezoom 0.3s forwards;
+}
+
+.zoomOut {
+  animation: animatezoom 0.3s reverse;
+}
+
+.addButton,
+.decoderButton {
+  width: 4rem;
+  height: 4rem;
+  bottom: 2rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.footer-content,
+.header-content {
+  height: 100%;
+}
+
+.icon,
+.name {
+  vertical-align: middle;
+}
+
+.addButton,
+.modalButton.close,
+.noteButton {
+  font-family: sans-serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content,
+.header-content,
+.page {
+  margin: 0 auto;
+}
+
+form,
+.header-content,
+.footer-content,
+.notes {
+  min-width: 300px;
+}

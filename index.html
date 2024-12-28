@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>StegAnoci</title>
+	<link rel="canonical" href="https://n-c0de-r.github.io/StegAnoci/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Icons and Colors -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/StegAnoci/icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/StegAnoci/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/StegAnoci/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/StegAnoci/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/StegAnoci/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/StegAnoci/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/StegAnoci/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/StegAnoci/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/StegAnoci/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/StegAnoci/icons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/StegAnoci/icons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/StegAnoci/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/StegAnoci/icons/android-chrome-192x192.png">
+	<link rel="manifest" href="/StegAnoci/manifest.json">
+	<link rel="mask-icon" href="/StegAnoci/icons/safari-pinned-tab.svg" color="#6dca4d">
+	<link rel="shortcut icon" href="/StegAnoci/icons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="StegAnoci">
+	<meta name="application-name" content="StegAnoci">
+	<meta name="msapplication-TileColor" content="#6dca4d">
+	<meta name="msapplication-TileImage" content="/StegAnoci/icons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/StegAnoci/icons/browserconfig.xml">
+	<meta name="theme-color" content="#6dca4d">
+
+	<!-- SEO and Social Sharing and SEO -->
+	<meta name="description"
+		content="A note taking app that hides the content in randomly selected words by steganography." />
+	<meta name="robots" content="noodp" />
+	<meta name="author" content="n-c0de-r">
+	<meta name="keywords"
+		content="progressive web app, progressive web application, pwa, pwa progressive web app, pwa progressive web application, progressive app, steganography, notes, note taking, steganography notes" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="StegAnoci" />
+	<meta property="og:description"
+		content="A note taking app that hides the content in randomly selected words by steganography." />
+	<meta property="og:url" content="https://n-c0de-r.github.io/StegAnoci/" />
+	<meta property="og:site_name" content="StegAnoci" />
+	<meta property="og:image" content="/StegAnoci/icons/share.jpg" />
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="/StegAnoci/style.css">
+
+	<!-- Javscript -->
+	<script defer src="/StegAnoci/script.js"></script>
+</head>
+
+<body>
+	<!-- Some parts taken from https://www.geeksforgeeks.org/creating-a-simple-image-editor-using-javascript/-->
+	<header>
+		<div class="header-content">
+			<!-- dynamic content place -->
+
+		</div>
+	</header>
+
+	<!-- Hidden image that will be used for
+    holding the source image -->
+    <img id="sourceImage" crossorigin="anonymous">
+
+	<canvas id="c" height="100" width="100" style="border:1px; display: none"></canvas>
+
+	<section>
+		<div class="page">
+			<!-- dynamic content place -->
+		</div>
+		<div class="notes animate button-group">
+			<!-- dynamic content place -->
+		</div>
+	</section>
+
+	<nav class="green">
+        <div class="nav-wrapper container">
+            <span class="nav-header">
+              Simple Image Filters
+            </span>
+            <ul class="right image-save">
+				<button class="btn btn-flat red white-text"
+                        onclick="resetImage()">
+                  Reset
+                </button>
+                <button class="btn btn-flat blue white-text"
+                        onclick="saveImage()">
+                  Save
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+	<footer>
+		<!-- dynamic content place -->
+	</footer>
+</body>
+
+</html>
